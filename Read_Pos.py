@@ -29,7 +29,7 @@ try:
     #servo23.set_angle_limits(0, 240)
     #servo24.set_angle_limits(0, 240)
 except ServoTimeoutError as e:
-    print(f"Servo {e.id_} is not responding. Exiting...")
+    
     quit()
 servo_pos = servo12.get_physical_angle()
 print(servo_pos)
