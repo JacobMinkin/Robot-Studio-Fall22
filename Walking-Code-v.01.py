@@ -68,6 +68,5 @@ except ServoTimeoutError as e:
     print(f"Servo {e.id_} is not responding. Exiting...")
     quit()
 starting_position ()
-move_leg_back ()
-move_leg (120, 120)
 
+quit()
