@@ -4,7 +4,7 @@ import time
 import math
 import numpy as np
 
-LX16A.initialize('/dev/ttyUSB4')
+LX16A.initialize('/dev/ttyUSB0')
 def starting_position ():
     for index in range(0, 100):
         servo1.move(120)
