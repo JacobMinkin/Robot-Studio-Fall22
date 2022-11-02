@@ -17,7 +17,7 @@ def move_leg_back ():
    back_pos = 120
    while t < 90 :
     front_pos = 120 - 10 * math.sin(math.radians(t)) 
-    back_pos  = 120 - 75 * math.sin(math.radians(t))
+    back_pos  = 120 - 15 * math.sin(math.radians(t))
     servo1.move (front_pos )
     servo2.move ( back_pos )
     print(servo2.get_physical_angle())
