@@ -31,5 +31,6 @@ try:
 except ServoTimeoutError as e:
     print(f"Servo {e.id_} is not responding. Exiting...")
     quit()
-print("Servo 11: " + str(servo11.get_physical_angle()))
+servo_pos = servo11.get_physical_pos()
+print(servo_pos)
 quit()
