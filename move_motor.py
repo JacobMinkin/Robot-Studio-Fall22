@@ -66,7 +66,7 @@ servo21.disable_torque()
 servo22.disable_torque()
 servo23.disable_torque()
 servo24.disable_torque()
-
+servo23.is_torque_enabled()
 save_front_pos = np.asarray([ servo_front_pos_new ])
 save_front_pos.tofile('front_pos.csv', sep = ',')   
 save_back_pos = np.asarray([ servo_front_pos_new ])
