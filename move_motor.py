@@ -35,25 +35,25 @@ except ServoTimeoutError as e:
 servo_front_pos = [servo11.get_physical_angle(), servo12.get_physical_angle(), servo13.get_physical_angle(), servo14.get_physical_angle()]
 servo_back_pos = [servo21.get_physical_angle(), servo22.get_physical_angle(), servo23.get_physical_angle(), servo24.get_physical_angle()]
 
-# servo11_new = 209.52 
-# servo12_new = 124.56
-# servo13_new = 25.68 
-# servo14_new = 105.84
-# servo21_new = 209.52 
-# servo22_new = 137.76
-# servo23_new = 32.4 
-# servo24_new = 109.44
+servo11_new = 209.52 
+servo12_new = 124.56
+servo13_new = 25.68 
+servo14_new = 105.84
+servo21_new = 209.52 
+servo22_new = 137.76
+servo23_new = 32.4 
+servo24_new = 109.44
 
-# servo11.move (servo11_new )
-# servo12.move ( servo12_new )
-# servo13.move (servo13_new )
-# servo14.move ( servo14_new )
-# servo21.move (servo21_new )
-# servo22.move ( servo22_new )
-# servo23.move (servo23_new )
-# servo24.move ( servo24_new )
+servo11.move (servo11_new )
+servo12.move ( servo12_new )
+servo13.move (servo13_new )
+servo14.move ( servo14_new )
+servo21.move (servo21_new )
+servo22.move ( servo22_new )
+servo23.move (servo23_new )
+servo24.move ( servo24_new )
 
-# time.sleep(5)
+time.sleep(5)
 
 servo11_new = 119.52 
 servo12_new = 93.36
@@ -76,6 +76,7 @@ servo24.move ( servo24_new )
 servo_front_pos_new = [servo11.get_physical_angle(), servo12.get_physical_angle(), servo13.get_physical_angle(), servo14.get_physical_angle()]
 servo_back_pos_new = [servo21.get_physical_angle(), servo22.get_physical_angle(), servo23.get_physical_angle(), servo24.get_physical_angle()]
 
+time.sleep(5)
 servo11.disable_torque()
 servo12.disable_torque()
 servo13.disable_torque()
