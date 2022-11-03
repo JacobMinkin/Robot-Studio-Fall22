@@ -53,4 +53,15 @@ servo22.move ( servo22_new )
 servo23.move (servo23_new )
 servo24.move ( servo24_new )
 
+time.sleep(5)
+
+servo11.disable_torque()
+servo12.disable_torque()
+servo13.disable_torque()
+servo14.disable_torque()
+servo21.disable_torque()
+servo22.disable_torque()
+servo23.disable_torque()
+servo24.disable_torque()
+
 quit()
