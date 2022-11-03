@@ -55,6 +55,24 @@ servo24.move ( servo24_new )
 
 time.sleep(5)
 
+servo11_new = 119.52 
+servo12_new = 93.36
+servo13_new = 110.88 
+servo14_new = 130.8
+servo21_new = 120.24
+servo22_new = 102.24
+servo23_new = 114.0 
+servo24_new = 130.32
+
+servo11.move (servo11_new )
+servo12.move ( servo12_new )
+servo13.move (servo13_new )
+servo14.move ( servo14_new )
+servo21.move (servo21_new )
+servo22.move ( servo22_new )
+servo23.move (servo23_new )
+servo24.move ( servo24_new )
+
 servo_front_pos_new = [servo11.get_physical_angle(), servo12.get_physical_angle(), servo13.get_physical_angle(), servo14.get_physical_angle()]
 servo_back_pos_new = [servo21.get_physical_angle(), servo22.get_physical_angle(), servo23.get_physical_angle(), servo24.get_physical_angle()]
 
@@ -65,8 +83,8 @@ servo14.disable_torque()
 servo21.disable_torque()
 servo22.disable_torque()
 servo23.disable_torque()
-servo24.disable_torque()
-print(servo23.is_torque_enabled() )
+servo24.disable_torque() 
+print(servo23.is_torque_enabled() ) 
 save_front_pos = np.asarray([ servo_front_pos_new ])
 save_front_pos.tofile('front_pos.csv', sep = ',')   
 save_back_pos = np.asarray([ servo_front_pos_new ])
