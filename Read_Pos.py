@@ -34,5 +34,5 @@ except ServoTimeoutError as e:
 servo_pos11 = servo11.get_physical_angle()
 servo_pos12 = servo12.get_physical_angle()
 
-print("Servo 11: " + servo_pos11 + " Servo 12: " + str(servo12.get_physical_angle()))
+print("Servo 11: " + str(servo_pos11) + " Servo 12: " + str(servo_pos12)
 quit()
