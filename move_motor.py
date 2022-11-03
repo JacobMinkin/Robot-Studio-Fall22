@@ -53,7 +53,7 @@ servo22.move ( servo22_new )
 servo23.move (servo23_new )
 servo24.move ( servo24_new )
 
-time.sleep(5)
+time.sleep(3)
 
 servo11_new = 119.52 
 servo12_new = 93.36
