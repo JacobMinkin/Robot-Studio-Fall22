@@ -4,7 +4,6 @@ import time
 import math
 import numpy as np
 from scipy import interpolate
-import matplotlib.pyplot as plt
 
 y1 = np.array([158.16, 174.48, 165.6, 97.2, 150.96])
 y2 = np.array([62.4, 140.88, 87.36, 49.68, 56.16])
