@@ -58,5 +58,11 @@ for z in range (0, 5):
         servo22.move ( f_12(y/25.0) )
         servo23.move (f_13(x/25.0))
         servo24.move ( f_14(x/25.0)) 
+
+        if(x == 250):
+            servo13.move (f_13(x/25.0))
+            servo14.move ( f_14(x/25.0) )
+            servo21.move (f_11(x/25.0) )
+            servo22.move ( f_12(x/25.0) )
         #time.sleep(.0001)
 quit()
