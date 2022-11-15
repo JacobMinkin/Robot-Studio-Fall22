@@ -1,5 +1,4 @@
 import numpy as np
-import matplotlib.pyplot as plt
 from scipy import interpolate
 
 y =  np.genfromtxt('pos.csv', delimiter=',')
@@ -18,7 +17,3 @@ f_22 = interpolate.interp1d(x, y[:,5])
 f_23 = interpolate.interp1d(x, y[:,6])
 f_24 = interpolate.interp1d(x, y[:,7])
 
-xnew = np.arange(0, 1, 0.1)
-ynew = f_11(xnew)   # use interpolation function returned by `interp1d`
-plt.plot(x, y, 'o', xnew, ynew, '-')
-plt.show()
