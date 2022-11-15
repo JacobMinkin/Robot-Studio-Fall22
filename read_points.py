@@ -50,6 +50,7 @@ print("Servo 23: " + str(servo_pos23) + " Servo 24: " + str(servo_pos24))
 
 old_pos = np.genfromtxt('pos.csv', delimiter=',')
 new_pos = np.asarray([ servo_pos])
+print(np.array2string(new_pos, separator=","))
 save_pos = np.append(old_pos,new_pos)
 save_pos.tofile('pos.csv', sep = ',') 
 
