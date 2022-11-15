@@ -46,10 +46,10 @@ except ServoTimeoutError as e:
     quit()
 for z in range (0, 5):
     for x in range (0, 100, 1):
-        if(x<125):
-            y = x+125
+        if(x<50):
+            y = x+50
         else:
-            y = x -125
+            y = x -50
         servo11.move (f_11(x/10.0) )
         servo12.move ( f_12(x/10.0) )
         servo13.move (f_13(y/10.0))
