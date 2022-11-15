@@ -54,5 +54,5 @@ for x in range (0, 4, 0.1):
     servo12.move ( f_12(x) )
     servo13.move (f_13(x))
     servo14.move ( f_14(x) )
-    time.sleep(3)
+    time.sleep(.5)
 quit()
