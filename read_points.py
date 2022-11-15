@@ -7,10 +7,6 @@ import numpy as np
 LX16A.initialize('/dev/ttyUSB0')
 
 
-
-
-    
-
 try:
     servo11 = LX16A(11)
     servo12 = LX16A(12)
@@ -41,13 +37,20 @@ servo_pos22 = servo22.get_physical_angle()
 servo_pos23 = servo23.get_physical_angle()
 servo_pos24 = servo24.get_physical_angle()
 
-servo_front_pos = [servo11.get_physical_angle(), servo12.get_physical_angle(), servo13.get_physical_angle(), servo14.get_physical_angle()]
-servo_back_pos = [servo21.get_physical_angle(), servo22.get_physical_angle(), servo23.get_physical_angle(), servo24.get_physical_angle()]
+servo_pos = [servo11.get_physical_angle(), servo12.get_physical_angle(), servo13.get_physical_angle(), 
+servo14.get_physical_angle(), servo21.get_physical_angle(), servo22.get_physical_angle(), servo23.get_physical_angle(),
+servo24.get_physical_angle()]
+
 
 print("Servo 11: " + str(servo_pos11) + " Servo 12: " + str(servo_pos12))
 print("Servo 13: " + str(servo_pos13) + " Servo 14: " + str(servo_pos14))
 
 print("Servo 21: " + str(servo_pos21) + " Servo 22: " + str(servo_pos22))
 print("Servo 23: " + str(servo_pos23) + " Servo 24: " + str(servo_pos24))
+
+old_pos = np.genfromtxt('pos.csv', delimiter=',')
+new_pos = np.asarray([ servo_pos])
+save_pos = np.append(old_pos,new_pos)
+save_pos.tofile('pos.csv', sep = ',') 
 
 quit()
