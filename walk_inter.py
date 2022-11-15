@@ -45,22 +45,31 @@ except ServoTimeoutError as e:
     
     quit()
 for z in range (0, 5):
-    for x in range (0, 100, 1):
-        if(x<50):
-            y = x+50
+    for x in range (0, 250, 1):
+        if(x<125):
+            y = x+125
         else:
-            y = x -50
-        servo11.move (f_11(x/10.0) )
-        servo12.move ( f_12(x/10.0) )
-        servo13.move (f_13(y/10.0))
-        servo14.move ( f_14(y/10.0) )
-        servo21.move (f_11(y/10.0) )
-        servo22.move ( f_12(y/10.0) )
-        servo23.move (f_13(x/10.0))
-        servo24.move ( f_14(x/10.0)) 
+            y = x -125
+        servo11.move (f_11(x/25.0) )
+        servo12.move ( f_12(x/25.0) )
+        servo13.move (f_13(y/25.0))
+        servo14.move ( f_14(y/25.0) )
+        servo21.move (f_11(y/25.0) )
+        servo22.move ( f_12(y/25.0) )
+        servo23.move (f_13(x/25.0))
+        servo24.move ( f_14(x/25.0)) 
         #time.sleep(.0001)
-servo13.move (f_13(x/10.0))
-servo14.move ( f_14(x/10.0) )
-servo21.move (f_11(x/10.0) )
-servo22.move ( f_12(x/10.0) )
+servo13.move (f_13(x/25.0))
+servo14.move ( f_14(x/25.0) )
+servo21.move (f_11(x/25.0) )
+servo22.move ( f_12(x/25.0) )
+time.sleep(5)
+servo11.disable_torque()
+servo12.disable_torque()
+servo13.disable_torque()
+servo14.disable_torque()
+servo21.disable_torque()
+servo22.disable_torque()
+servo23.disable_torque()
+servo24.disable_torque() 
 quit()
