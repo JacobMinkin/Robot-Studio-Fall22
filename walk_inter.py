@@ -45,18 +45,18 @@ except ServoTimeoutError as e:
     
     quit()
 
-for x in range (0, 1000, 1):
+for x in range (0, 500, 1):
     if(x<500):
         y = x+500
     else:
         y = x -500
-    servo11.move (f_11(x/100.0) )
-    servo12.move ( f_12(x/100.0) )
-    servo13.move (f_13(y/100.0))
-    servo14.move ( f_14(y/100.0) )
-    servo21.move (f_11(y/100.0) )
-    servo22.move ( f_12(y/100.0) )
-    servo23.move (f_13(x/100.0))
-    servo24.move ( f_14(x/100.0)) 
+    servo11.move (f_11(x/50.0) )
+    servo12.move ( f_12(x/50.0) )
+    servo13.move (f_13(y/50.0))
+    servo14.move ( f_14(y/50.0) )
+    servo21.move (f_11(y/50.0) )
+    servo22.move ( f_12(y/50.0) )
+    servo23.move (f_13(x/50.0))
+    servo24.move ( f_14(x/50.0)) 
     #time.sleep(.0001)
 quit()
