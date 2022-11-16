@@ -45,19 +45,19 @@ except ServoTimeoutError as e:
     print("I Died")
     quit()
 for z in range (0, 5):
-    for x in range (0, 250, 1):
-        if(x<125):
-            y = x+125
+    for x in range (0, 100, 1):
+        if(x<50):
+            y = x+50
         else:
-            y = x -125
-        servo11.move (f_11(x/25.0) )
-        servo12.move ( f_12(x/25.0) )
-        servo13.move (f_13(x/25.0))
-        servo14.move ( f_14(x/25.0) )
-        servo21.move (f_11(y/25.0) )
-        servo22.move ( f_12(y/25.0) )
-        servo23.move (f_13(y/25.0))
-        servo24.move ( f_14(y/25.0)) 
+            y = x -50
+        servo11.move (f_11(x/10.0) )
+        servo12.move ( f_12(x/10.0) )
+        servo13.move (f_13(x/10.0))
+        servo14.move ( f_14(x/10.0) )
+        servo21.move (f_11(y/10.0) )
+        servo22.move ( f_12(y/10.0) )
+        servo23.move (f_13(y/10.0))
+        servo24.move ( f_14(y/10.0)) 
         #time.sleep(.0001)
 servo11.move (f_11(5) )
 servo12.move ( f_12(5) )
