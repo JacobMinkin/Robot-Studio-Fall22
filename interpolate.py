@@ -1,5 +1,6 @@
 import numpy as np
 from scipy import interpolate
+from scipy.interpolate import splev, splrep, UnivariateSpline
 import matplotlib.pyplot as plt
 
 """ y1 = np.array([158.16, 174.48, 165.6, 97.2, 150.96])
@@ -20,6 +21,23 @@ f_11 = interpolate.interp1d(x, y[:, 0])
 f_12 = interpolate.interp1d(x, y[:, 1])
 f_13 = interpolate.interp1d(x, y[:, 2])
 f_14 = interpolate.interp1d(x, y[:, 3])
+
+
+
+y_s = np.transpose(y[:,0])
+#plt.plot(x, y_s, 'ro', ms=5)
+
+spl = UnivariateSpline(x, y_s)
+xs = np.linspace(0, 10, 1000)
+#plt.plot(xs, spl(xs), 'g', lw=3)
+
+""" spl = splrep(x, y[:,0], s= 100)
+y2 = splev(x, spl)
+plt.plot(x, y[:,0], 'o', x, y2, '-') """
+
+spl.set_smoothing_factor(.5)
+plt.plot(xs, spl(xs), 'b', lw=3)
+
 
 xnew = np.arange(0, 10, 0.1)
 ynew = f_11(xnew)   # use interpolation function returned by `interp1d`
