@@ -24,7 +24,7 @@ f_14 = interpolate.interp1d(x, y[:, 3])
 
 
 
-y_s = np.transpose(y[:,0])
+y_s = np.transpose(y[:,1])
 #plt.plot(x, y_s, 'ro', ms=5)
 
 spl = UnivariateSpline(x, y_s)
