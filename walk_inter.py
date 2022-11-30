@@ -19,7 +19,7 @@ f_13 = interpolate.interp1d(x, y[:, 2])
 f_14 = interpolate.interp1d(x, y[:, 3])
  """
 
-LX16A.initialize('/dev/ttyUSB0')
+""" LX16A.initialize('/dev/ttyUSB0')
 
 
 
@@ -45,7 +45,7 @@ try:
     servo24.set_angle_limits(0, 240)
 except ServoTimeoutError as e:
     
-    quit()
+    quit() """
 
 while True:
     steps = input("Enter number of steps: ")
