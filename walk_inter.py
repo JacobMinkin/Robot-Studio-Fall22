@@ -80,14 +80,15 @@ def move_step(steps = 5, speed = 250):
     servo22.disable_torque()
     servo23.disable_torque()
     servo24.disable_torque() 
-    
+
 while True:
-    steps = input("Enter number of steps: ")
-    speed = input("Enter speed: ")
+    steps = 0
+    speed = 0
     while (steps < 1 & speed < 50 ):
         steps = input("Enter number of steps: ")
         speed = input("Enter speed: ")
-     
+        speed = int(speed)
+        steps = int (steps)
     move_step(steps= steps, speed= 150)
     
 """ for z in range (0, 5):
