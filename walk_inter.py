@@ -99,7 +99,7 @@ while True:
         speed = input("Enter speed: ")
         speed = int(speed)
         steps = int (steps)
-    move_step(steps= steps, speed= 150)
+    move_step(steps= steps, speed= speed)
     
 """ for z in range (0, 5):
     for x in range (0, 200, 1):
