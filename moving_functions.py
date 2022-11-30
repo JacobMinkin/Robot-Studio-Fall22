@@ -92,7 +92,7 @@ def move_step(steps = 5, speed = 250):
     servo23.disable_torque()
     servo24.disable_torque() 
 
-def move_speed(endtime = 5, speed = 250):
+def move_time(endtime = 5, speed = 250):
     half_speed = (speed/2)
     speed_ten = speed/10
     while time.time() < endtime:
