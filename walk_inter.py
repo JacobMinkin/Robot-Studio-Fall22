@@ -82,8 +82,10 @@ def move_step(steps = 5, speed = 250):
     servo24.disable_torque() 
 
 while True:
-    steps = 0
-    speed = 0
+    steps = input("Enter number of steps: ")
+    speed = input("Enter speed: ")
+    speed = int(speed)
+    steps = int (steps)
     while (steps < 1 & speed < 50 ):
         steps = input("Enter number of steps: ")
         speed = input("Enter speed: ")
