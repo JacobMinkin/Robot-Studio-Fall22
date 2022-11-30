@@ -41,7 +41,7 @@ try:
     servo23.set_angle_limits(0, 240)
     servo24.set_angle_limits(0, 240)
 except ServoTimeoutError as e:
-    
+    print("ERROR")
     quit()
 
 
