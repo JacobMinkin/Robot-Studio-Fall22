@@ -52,7 +52,7 @@ while True:
         steps = input("Enter number of steps: ")
         speed = input("Enter speed: ")
      
-    move_step(steps= steps, speed= speed)
+    move_step(steps= steps, speed= 150)
     
 """ for z in range (0, 5):
     for x in range (0, 200, 1):
