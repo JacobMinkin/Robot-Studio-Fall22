@@ -46,6 +46,14 @@ except ServoTimeoutError as e:
     
     quit()
 def move_step(steps = 5, speed = 250):
+    servo11.enable_torque()
+    servo12.enable_torque()
+    servo13.enable_torque()
+    servo14.enable_torque()
+    servo21.enable_torque()
+    servo22.enable_torque()
+    servo23.enable_torque()
+    servo24.enable_torque() 
     half_speed = (speed/2)
     speed_ten = speed/10
     for z in range (0, steps):
