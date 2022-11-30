@@ -46,8 +46,8 @@ except ServoTimeoutError as e:
     
     quit()
 while True:
-    steps = 0
-    speed = 0
+    steps = input("Enter number of steps: ")
+    speed = input("Enter speed: ")
     while (steps < 1 & speed < 50 ):
         steps = input("Enter number of steps: ")
         speed = input("Enter speed: ")
