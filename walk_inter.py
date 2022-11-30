@@ -1,6 +1,6 @@
 from math import sin, cos
 from lx16a import *
-#from moving_functions import *
+from moving_functions import *
 import time
 import math
 import numpy as np
