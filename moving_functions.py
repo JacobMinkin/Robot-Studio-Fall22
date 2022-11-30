@@ -126,6 +126,7 @@ def move_time(endtime = 15, speed = 250):
             servo22.move ( f_12(y/speed_ten) )
             servo23.move (f_13(x/speed_ten))
             servo24.move ( f_14(x/speed_ten)) 
+            startTime = time.time()
             #time.sleep(.0001)
     servo11.move (f_11(5) )
     servo12.move ( f_12(5) )

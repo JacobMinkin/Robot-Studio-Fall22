@@ -22,5 +22,5 @@ while True:
             speed = input("Enter speed: ")
             speed = int(speed)
             steps = int (steps)
-        move_time( steps, speed= speed)
+        move_time( endtime = steps, speed= speed)
     
