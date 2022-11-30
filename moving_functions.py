@@ -18,11 +18,6 @@ f_14 = interpolate.interp1d(x, y[:, 3])
 
 LX16A.initialize('/dev/ttyUSB0')
 
-
-
-
-    
-
 try:
     servo11 = LX16A(11)
     servo12 = LX16A(12)
@@ -65,6 +60,42 @@ def move_step(steps = 5, speed = 250):
     half_speed = (speed/2)
     speed_ten = speed/10
     for z in range (0, steps):
+        for x in range (0, speed, 1):
+            if(x<half_speed):
+                y = x + half_speed
+            else:
+                y = x - half_speed
+            servo11.move (f_11(x/speed_ten) )
+            servo12.move ( f_12(x/speed_ten) )
+            servo13.move (f_13(y/speed_ten))
+            servo14.move ( f_14(y/speed_ten) )
+            servo21.move (f_11(y/speed_ten) )
+            servo22.move ( f_12(y/speed_ten) )
+            servo23.move (f_13(x/speed_ten))
+            servo24.move ( f_14(x/speed_ten)) 
+            #time.sleep(.0001)
+    servo11.move (f_11(5) )
+    servo12.move ( f_12(5) )
+    servo13.move (f_13(5))
+    servo14.move ( f_14(5) )
+    servo21.move (f_11(5) )
+    servo22.move ( f_12(5) )
+    servo23.move (f_13(5))
+    servo24.move ( f_14(5)) 
+    time.sleep(5)
+    servo11.disable_torque()
+    servo12.disable_torque()
+    servo13.disable_torque()
+    servo14.disable_torque()
+    servo21.disable_torque()
+    servo22.disable_torque()
+    servo23.disable_torque()
+    servo24.disable_torque() 
+
+def move_speed(endtime = 5, speed = 250):
+    half_speed = (speed/2)
+    speed_ten = speed/10
+    while time.time() < endtime:
         for x in range (0, speed, 1):
             if(x<half_speed):
                 y = x + half_speed
