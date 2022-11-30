@@ -15,7 +15,36 @@ f_11 = interpolate.interp1d(x, y[:, 0])
 f_12 = interpolate.interp1d(x, y[:, 1])
 f_13 = interpolate.interp1d(x, y[:, 2])
 f_14 = interpolate.interp1d(x, y[:, 3])
- 
+
+LX16A.initialize('/dev/ttyUSB0')
+
+
+
+
+    
+
+try:
+    servo11 = LX16A(11)
+    servo12 = LX16A(12)
+    servo13 = LX16A(13)
+    servo14 = LX16A(14)
+    servo21 = LX16A(21)
+    servo22 = LX16A(22)
+    servo23 = LX16A(23)
+    servo24 = LX16A(24)
+    servo11.set_angle_limits(0, 240)
+    servo12.set_angle_limits(0, 240)
+    servo13.set_angle_limits(0, 240)
+    servo14.set_angle_limits(0, 240)
+    servo21.set_angle_limits(0, 240)
+    servo22.set_angle_limits(0, 240)
+    servo23.set_angle_limits(0, 240)
+    servo24.set_angle_limits(0, 240)
+except ServoTimeoutError as e:
+    
+    quit()
+
+
 def move_small(y):
     for i in range (1,5):
         if( i&2 == 0):
