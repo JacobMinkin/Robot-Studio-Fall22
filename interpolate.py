@@ -36,7 +36,7 @@ y2 = splev(x, spl)
 plt.plot(x, y[:,0], 'o', x, y2, '-') """
 
 spl.set_smoothing_factor(.5)
-plt.plot(xs, spl(xs), 'b', lw=3)
+#plt.plot(xs, spl(xs), 'b', lw=3)
 
 
 xnew = np.arange(0, 10, 0.1)

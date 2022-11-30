@@ -1,5 +1,6 @@
 from math import sin, cos
 from lx16a import *
+from moving_functions import *
 import time
 import math
 import numpy as np
@@ -44,7 +45,16 @@ try:
 except ServoTimeoutError as e:
     
     quit()
-for z in range (0, 5):
+while True:
+    steps = 0
+    speed = 0
+    while (steps < 1 & speed < 50 ):
+        steps = input("Enter number of steps: ")
+        speed = input("Enter speed: ")
+     
+    move_step(steps= steps, speed= speed)
+    
+""" for z in range (0, 5):
     for x in range (0, 200, 1):
         if(x<100):
             y = x+100
@@ -58,8 +68,8 @@ for z in range (0, 5):
         servo22.move ( f_12(y/20.0) )
         servo23.move (f_13(x/20.0))
         servo24.move ( f_14(x/20.0)) 
-        #time.sleep(.0001)
-servo11.move (f_11(5) )
+        #time.sleep(.0001) """
+""" servo11.move (f_11(5) )
 servo12.move ( f_12(5) )
 servo13.move (f_13(5))
 servo14.move ( f_14(5) )
@@ -75,5 +85,5 @@ servo14.disable_torque()
 servo21.disable_torque()
 servo22.disable_torque()
 servo23.disable_torque()
-servo24.disable_torque() 
+servo24.disable_torque()  """
 quit()
