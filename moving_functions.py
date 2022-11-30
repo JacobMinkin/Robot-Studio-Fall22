@@ -112,6 +112,7 @@ def move_time(endtime = 15, speed = 250):
     half_speed = (speed/2)
     speed_ten = speed/10
     startTime = time.time()
+    print(startTime)
     newTime = 0
     while startTime < newTime + endtime:
         for x in range (0, speed, 1):
