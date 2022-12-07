@@ -174,7 +174,7 @@ def move_turn(steps = 5, side = "right", speed = 250):
                 y_R = x_R + half_speed/2
             else:
                 y_L = x_L - half_speed/2
-                y_R = x_R - half_speed/2x
+                y_R = x_R - half_speed/2
 
             # Front Right
             servo11.move (f_11(x_R/speed_ten) )
