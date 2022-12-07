@@ -162,15 +162,11 @@ def move_turn(steps = 5, side = "right", speed = 250):
     y = speed
     for z in range (0, steps):
         for x in range (0, speed, 1):
-            if( x < y ):
-                y = speed - x
-            else:
-                y = x
+            y = speed - x
             if side == "right":
                 temp = y
                 y = x
-                x = temp  
-
+                x = temp       
             # Front Right
             servo11.move (f_11(x/speed_ten) )
             servo12.move (f_12(x/speed_ten) )
@@ -182,7 +178,7 @@ def move_turn(steps = 5, side = "right", speed = 250):
             servo22.move ( f_12(x/speed_ten) )
             # Back Left
             servo23.move (f_13(y/speed_ten))
-            servo24.move ( f_14(y/speed_ten))  
+            servo24.move ( f_14(y/speed_ten))   
 
 
     servo11.move (f_11(5) )
