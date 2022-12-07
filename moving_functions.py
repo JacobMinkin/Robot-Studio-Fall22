@@ -157,7 +157,7 @@ def move_turn(steps = 5, side = "right", speed = 250):
     servo23.enable_torque()
     servo24.enable_torque()
 
-    half_speed = (speed/2)
+    half_speed = int(speed/2)
     speed_ten = speed/10
     for z in range (0, steps):
         for x in range (0, half_speed, 1):
