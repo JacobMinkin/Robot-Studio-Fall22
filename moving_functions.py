@@ -146,3 +146,63 @@ def move_time(endtime = 15, speed = 250):
     servo22.disable_torque()
     servo23.disable_torque()
     servo24.disable_torque() 
+
+def move_turn(steps = 5, side = "right", speed = 250):
+    servo11.enable_torque()
+    servo12.enable_torque()
+    servo13.enable_torque()
+    servo14.enable_torque()
+    servo21.enable_torque()
+    servo22.enable_torque()
+    servo23.enable_torque()
+    servo24.enable_torque()
+
+    half_speed = (speed/2)
+    speed_ten = speed/10
+
+    for z in range (0, steps):
+        for x in range (0, speed, 1):
+            if side == "right":
+                x_R = x
+                x_L = x/2
+            else:
+                x_R = x/2
+                x_L = x
+
+            if(x<half_speed):
+                y_L = x_L + half_speed
+                y_R = x_R + half_speed
+            else:
+                y_L = x_L - half_speed
+                y_R = x_R - half_speed
+
+            # Front Right
+            servo11.move (f_11(x_R/speed_ten) )
+            servo12.move (f_12(x_R/speed_ten) )
+            # Front Left
+            servo13.move (f_13(y_L/speed_ten))
+            servo14.move (f_14(y_L/speed_ten) )
+            # Back Right
+            servo21.move (f_11(y_R/speed_ten) )
+            servo22.move ( f_12(y_R/speed_ten) )
+            # Back Left
+            servo23.move (f_13(x_L/speed_ten))
+            servo24.move ( f_14(x_L/speed_ten)) 
+            #time.sleep(.0001)
+    servo11.move (f_11(5) )
+    servo12.move ( f_12(5) )
+    servo13.move (f_13(5))
+    servo14.move ( f_14(5) )
+    servo21.move (f_11(5) )
+    servo22.move ( f_12(5) )
+    servo23.move (f_13(5))
+    servo24.move ( f_14(5)) 
+    time.sleep(5)
+    servo11.disable_torque()
+    servo12.disable_torque()
+    servo13.disable_torque()
+    servo14.disable_torque()
+    servo21.disable_torque()
+    servo22.disable_torque()
+    servo23.disable_torque()
+    servo24.disable_torque() 
