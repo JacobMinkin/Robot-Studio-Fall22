@@ -165,7 +165,7 @@ def move_turn(steps = 5, side = "right", speed = 250):
             if( x < y ):
                 y = speed - x
             else:
-                y = speed
+                y = x
             if side == "right":
                 temp = y
                 y = x
