@@ -160,7 +160,7 @@ def move_turn(steps = 5, side = "right", speed = 250):
     half_speed = (speed/2)
     speed_ten = speed/10
     for z in range (0, steps):
-        for x in range (0, speed, 1):
+        for x in range (0, half_speed, 1):
             y = speed - x
             if side == "right":
                 temp = y
