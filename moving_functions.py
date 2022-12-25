@@ -199,6 +199,72 @@ def move_turn(steps = 5, side = "right", speed = 250):
     servo23.disable_torque()
     servo24.disable_torque() 
 
+
+def new_move_time(endtime = 15, speed = 250):
+    servo11.enable_torque()
+    servo12.enable_torque()
+    servo13.enable_torque()
+    servo14.enable_torque()
+    servo21.enable_torque()
+    servo22.enable_torque()
+    servo23.enable_torque()
+    servo24.enable_torque() 
+    half_speed = (speed/2)
+    speed_ten = speed/10
+
+
+
+    startTime = time.time()
+    newTime = time.time()
+    while startTime + endtime > newTime:
+        for x in range (0, 2*speed, 1):
+            
+            y = .785*x 
+            
+            # This makes sure that we never output a number greater than speed
+            while(x> speed):
+                x = x- speed
+
+            while(y> speed):
+                y = y- speed
+
+            # if(x<half_speed):
+            #     y = x + half_speed
+            # else:
+            #     y = x - half_speed
+            
+            #Front Left Legs
+            servo11.move (f_11(x/speed_ten) )
+            servo12.move ( f_12(x/speed_ten) )
+            #Front Right Legs
+            servo13.move (f_13(y/speed_ten))
+            servo14.move ( f_14(y/speed_ten) )
+            #Back right Legs
+            servo21.move (f_11(y/speed_ten) )
+            servo22.move ( f_12(y/speed_ten) )
+            #Back Left Legs
+            servo23.move (f_13(x/speed_ten))
+            servo24.move ( f_14(x/speed_ten)) 
+            newTime = time.time()
+            #time.sleep(.0001)
+    # servo11.move (f_11(5) )
+    # servo12.move ( f_12(5) )
+    # servo13.move (f_13(5))
+    # servo14.move ( f_14(5) )
+    # servo21.move (f_11(5) )
+    # servo22.move ( f_12(5) )
+    # servo23.move (f_13(5))
+    # servo24.move ( f_14(5)) 
+    time.sleep(5)
+    servo11.disable_torque()
+    servo12.disable_torque()
+    servo13.disable_torque()
+    servo14.disable_torque()
+    servo21.disable_torque()
+    servo22.disable_torque()
+    servo23.disable_torque()
+    servo24.disable_torque() 
+
 """    
          y = speed - x
             if side == "right":
@@ -217,5 +283,6 @@ def move_turn(steps = 5, side = "right", speed = 250):
             # Back Left
             servo23.move (f_13(y/speed_ten))
             servo24.move ( f_14(y/speed_ten))  
-            """
+"""
+
             #time.sleep(.0001)

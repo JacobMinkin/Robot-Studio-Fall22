@@ -4,6 +4,8 @@ from moving_functions import *
 
 while True:
     speed = input("Enter speed: ")
+    if(speed == "test"):
+        new_move_time()
     if(speed == "exit"):
         quit()
     walk_test = input("Enter time, steps or turn: ")
