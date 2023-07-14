@@ -3,6 +3,6 @@ This project is currently under development and a full write up will be coming v
 In the mean time here are some pictures of the robot
 Enjoy!
 ![Yidi Reiss and Jacob Minkin](./Images/Yidi_Jacob_Robot.jpg)
-<video src="https://github.com/JacobMinkin/Robot-Studio-Fall22/blob/main/Images/Robot_Video.mp4" width="320" height="200" controls preload></video>
+![Robot Walking](./Images/robot_dog_gif.gif)
 ![Side View](./Images/Side_View.jpg)
 ![Early SolidWorks Render](./Images/Solidworks_Image.JPG)
